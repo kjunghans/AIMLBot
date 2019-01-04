@@ -6,6 +6,7 @@ using System.IO;
 using System.Xml;
 using System.Text;
 using System.Reflection;
+using System.Runtime.Serialization.Formatters.Binary;
 #if NETSTANDARD
 using MailKit.Net.Smtp;
 using MimeKit;
@@ -956,7 +957,7 @@ namespace AIMLbot
 #endregion
 
 #region Serialization
-#if !NETSTANDARD
+//#if !NETSTANDARD
 
         /// <summary>
         /// Saves the graphmaster node (and children) to a binary file to avoid processing the AIML each time the 
@@ -990,7 +991,7 @@ namespace AIMLbot
             loadFile.Close();
         }
 
-#endif
+//#endif
 #endregion
 
 #region Latebinding custom-tag dll handlers
